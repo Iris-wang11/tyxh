@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息公示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+
+        body {
+            background-color: #f7f8fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 15px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 34px;
+            color: #222;
+            margin-bottom: 30px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #3366aa;
+        }
+
+        .photo-item {
+            background: #fff;
+            padding: 8px;
+            border-radius: 6px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .caption {
+            font-family: "SimSun", "宋体", serif;
+            font-weight: 900;
+            font-size: 26px;
+            color: #000;
+            margin-bottom: 8px;
+        }
+
+        .img-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        /* 只有1张图片时，自动居中 */
+        .img-row:has(img:only-child) {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+        .img-row:has(img:only-child) img {
+            max-width: 50%;
+        }
+
+        .img-row img {
+            width: 100%;
+            height: auto;
+            border-radius: 3px;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .img-row {
+                grid-template-columns: 1fr;
+            }
+            .img-row:has(img:only-child) img {
+                max-width: 100%;
+            }
+            .caption {
+                font-size: 22px;
+            }
+        }
+
+        footer {
+            margin-top: 35px;
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>信息公示</h1>
+
+        <!-- 会费收费标准（单张图，自动居中） -->
+        <div class="photo-item">
+            <div class="caption">会费收费标准</div>
+            <div class="img-row">
+                <img src="img/fee.jpg" alt="会费收费标准">
+            </div>
+        </div>
+
+        <!-- 负责人、监事名单（单张图，自动居中） -->
+        <div class="photo-item">
+            <div class="caption">负责人、监事名单</div>
+            <div class="img-row">
+                <img src="img/person_change.jpg" alt="负责人、监事名单">
+            </div>
+        </div>
+
+        <!-- 理事会成员名单（两张并排） -->
+        <div class="photo-item">
+            <div class="caption">理事会成员名单</div>
+            <div class="img-row">
+                <img src="img/council1.jpg" alt="理事会成员名单">
+                <img src="img/council2.jpg" alt="理事会成员名单">
+            </div>
+        </div>
+
+        <!-- 组织架构图（单张图，自动居中） -->
+        <div class="photo-item">
+            <div class="caption">组织架构图</div>
+            <div class="img-row">
+                <img src="img/org.jpg" alt="组织架构图">
+            </div>
+        </div>
+
+        <!-- 登记证书（单张图，自动居中） -->
+        <div class="photo-item">
+            <div class="caption">登记证书</div>
+            <div class="img-row">
+                <img src="img/cert.jpg" alt="登记证书">
+            </div>
+        </div>
+
+        <!-- 经核准的章程（多张自动2张一排） -->
+        <div class="photo-item">
+            <div class="caption">经核准的章程</div>
+            <div class="img-row">
+                <img src="img/charter1.jpg" alt="章程">
+                <img src="img/charter2.jpg" alt="章程">
+                <img src="img/charter3.jpg" alt="章程">
+                <img src="img/charter4.jpg" alt="章程">
+                <img src="img/charter5.jpg" alt="章程">
+                <img src="img/charter6.jpg" alt="章程">
+                <img src="img/charter7.jpg" alt="章程">
+            </div>
+        </div>
+
+        <footer>
+            © 2026 南京市残疾人托养服务协会
+        </footer>
+    </div>
+</body>
+</html>
